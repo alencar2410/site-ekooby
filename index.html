@@ -59,7 +59,179 @@
             <span>Rosto</span>
         </div>
     </section>
-    "
+    <section class="beneficios">
+  <div class="beneficio-card">
+    <img src="./img/globe-americas (1).svg" alt="Ícone ecológico">
+    <h3>Produtos ecológicos</h3>
+    <p>Produtos ecológicos que cuidam de você e do planeta.</p>
+  </div>
+  <div class="beneficio-card">
+    <img src="./img/rocket-takeoff.svg" alt="Ícone entrega">
+    <h3>Entregas</h3>
+    <p>Entregamos para todo o Brasil com responsabilidade e carinho.</p>
+  </div>
+  <div class="beneficio-card">
+    <img src="./img/yelp.svg" alt="Ícone indígena">
+    <h3>Origem indígena</h3>
+    <p>Inspirados na sabedoria ancestral dos povos indígenas do Brasil.</p>
+  </div>
+  <div class="beneficio-card">
+    <img src="./img/gitlab.svg" alt="Ícone animais">
+    <h3>Animais</h3>
+    <p>Não testado em animais. Beleza com respeito à vida.</p>
+  </div>
+  <div class="beneficio-card">
+    <img src="./img/tux.svg" alt="Ícone hipoalergênico">
+    <h3>Hipoalergênico</h3>
+    <p>Hipoalergênico e seguro para todos os tipos de pele.</p>
+  </div>
+  <div class="beneficio-card">
+    <img src="./img/snow.svg" alt="Ícone exclusivo">
+    <h3>Exclusivo</h3>
+    <p>Cosméticos únicos como a natureza, e principalmente como você.</p>
+  </div>
+</section>
+<section class="promocoes">
+  <h2>Promoções da Semana</h2>
+  <div class="carrossel-container">
+    <button class="seta prev">←</button>
+
+    <div class="carrossel-items">
+      <div class="item">
+        <img src="./img/alemao jpg.jpg" alt="Produto 1">
+        <h3>Batom Eko Red</h3>
+        <p>De R$ 59,90 por <strong>R$ 39,90</strong></p>
+      </div>
+      <div class="item">
+        <img src="./img/Gemini_Generated_Image_u3h1ntu3h1ntu3h1.png" alt="Produto 2">
+        <h3>Máscara EcoLash</h3>
+        <p>De R$ 79,90 por <strong>R$ 49,90</strong></p>
+      </div>
+      <div class="item">
+        <img src="./img/Gemini_Generated_Image_5oh8nw5oh8nw5oh8.png" alt="Produto 3">
+        <h3>Base Natural Skin</h3>
+        <p>De R$ 89,90 por <strong>R$ 59,90</strong></p>
+      </div>
+    </div>
+
+    <button class="seta next">→</button>
+  </div>
+</section>
+
+
+<script>
+  const container = document.querySelector('.carrossel-items');
+  const items = document.querySelectorAll('.item');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  let index = 0;
+
+  function updateCarrossel() {
+    container.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    index = (index === 0) ? items.length - 1 : index - 1;
+    updateCarrossel();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    index = (index === items.length - 1) ? 0 : index + 1;
+    updateCarrossel();
+  });
+</script>
+
+
+<section class="sobre-ekooby">
+  <div class="sobre-texto">
+    <h2>Beleza com propósito</h2>
+    <p>
+      A Ekooby nasceu com a missão de promover a beleza consciente. Nossos produtos são feitos com ingredientes naturais, livres de crueldade animal e com responsabilidade ambiental. 
+    </p>
+    <p>
+      Transforme sua rotina de cuidados com escolhas sustentáveis e eficazes. Porque sua beleza também pode cuidar do mundo.
+    </p>
+    <a href="#app" class="botao-sobre">Baixe nosso app</a>
+  </div>
+
+  <div class="sobre-imagem">
+    <img src="./img/Gemini_Generated_Image_z4009kz4009kz400.png" alt="Aplicativo Ekooby no celular" />
+  </div>
+</section>
+
+
+<section class="depoimentos">
+  <h2>O que dizem nossas clientes</h2>
+  <div class="depoimentos-container">
+    <div class="depoimento">
+      <p>“A qualidade dos produtos da Ekooby me surpreendeu! Além disso, saber que são sustentáveis me deixa ainda mais feliz.”</p>
+      <span>— Ana Clara, RJ</span>
+    </div>
+
+    <div class="depoimento">
+      <p>“Minha pele nunca esteve tão bonita. E ainda recebo tudo rapidinho em casa. Amei!”</p>
+      <span>— Juliana M., SP</span>
+    </div>
+
+    <div class="depoimento">
+      <p>“Sou apaixonada pelos batons! E saber que a marca se preocupa com o meio ambiente me conquistou de vez.”</p>
+      <span>— Vanessa L., MG</span>
+    </div>
+  </div>
+</section>
+<section class="dicas-beleza">
+  <h2>Dicas de Beleza</h2>
+  <div class="dicas-cards">
+    <div class="dica">
+      <img src="./img/Gemini_Generated_Image_otd4nsotd4nsotd4.png" alt="Dica 1">
+      <p>Como escolher o batom ideal para seu tom de pele</p>
+    </div>
+    <div class="dica">
+      <img src="./img/Gemini_Generated_Image_euv03leuv03leuv0.png" alt="Dica 2">
+      <p>5 passos para uma pele hidratada e iluminada</p>
+    </div>
+    <div class="dica">
+      <img src="./img/Gemini_Generated_Image_sa0b9jsa0b9jsa0b.png" alt="Dica 3">
+      <p>Maquiagem minimalista: tendência 2025</p>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <h2>Receba ofertas e dicas exclusivas</h2>
+  <form>
+    <input type="email" placeholder="Digite seu e-mail" required>
+    <button type="submit">Assinar</button>
+  </form>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-logo">
+    <img src="./img/logoekoobypng.png" alt="Logo Ekooby">
+    <p>Beleza consciente para um mundo melhor.</p>
+  </div>
+
+  <div class="footer-links">
+    <h4>Institucional</h4>
+    <ul>
+      <li><a href="">Sobre</a></li>
+      <li><a href="">Contato</a></li>
+      <li><a href="">Trabalhe conosco</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-social">
+    <h4>Redes sociais</h4>
+    <div class="icones-sociais">
+      <a href="#"><img src="./img/instagram (1).svg" alt="Instagram"></a>
+      <a href="#"><img src="./img/tiktok.svg" alt="TikTok"></a>
+      <a href="#"><img src="./img/whatsapp.svg" alt="Whatsapp"></a>
+    </div>
+  </div>
+</footer>
+
+
 
 </body>
 
